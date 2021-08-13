@@ -1,0 +1,206 @@
+<html>
+    <script>
+        function vform() {
+
+            let a = parseFloat(document.getElementById("m1").value);
+            let b = parseFloat(document.getElementById("m2").value);
+            let c = parseFloat(document.getElementById("m3").value);
+            let d = parseFloat(document.getElementById("m4").value);
+            let e = parseFloat(document.getElementById("m5").value);
+            let t = "";
+            if(document.getElementById("h1").value=="s00") {
+                a = parseFloat(a - 2.5);
+                t = "2.5% deducted due to selection of non list subject";
+            }
+            if(document.getElementById("h2").value=="s00") {
+                b = parseFloat(b - 2.5);
+                t = "2.5% deducted due to selection of non list subject";
+            }
+            if(document.getElementById("h3").value=="s00") {
+                c = parseFloat(c - 2.5);
+                t = "2.5% deducted due to selection of non list subject";
+            }
+            if(document.getElementById("h4").value=="s00") {
+                d = parseFloat(d - 2.5);
+                t = "2.5% deducted due to selection of non list subject";
+            }
+            if(document.getElementById("h5").value=="s00") {
+                e = parseFloat(e - 2.5);
+                t = "2.5% deducted due to selection of non list subject";
+            }
+            let add = 0;
+            if(a > b || a > c || a > d || a > e){
+                add = parseFloat(add + a);
+            }
+            if(b > a || b > c || b > d || b > e){
+                add = parseFloat(add + b);
+            }
+            if(c > b || c > a || c > d || c > e){
+                add = parseFloat(add + c);
+            }
+            if(d > b || d > c || d > a || d > e){
+                add = parseFloat(add + d);
+            }
+            if(e > b || e > c || e > d || e > a){
+                add = parseFloat(add + e);
+            }
+            let ave = parseFloat(add/4);
+            document.write("Your Top 4 Marks is "+ave+"%"+"<br>"+t);
+
+        }
+    </script>
+    <head>
+
+    </head>
+    <body><center><h1>DU TOP 4 CALCULATOR</h1>
+        <form id="F1" onsubmit="return vform()" method=post>
+            <br>
+            Subject 1: <select name="Subject" id="h1">
+                <option value="s00">Non Listed Subject</option>
+                <option value="s1">Mathemathics</option>
+                <option value="s2">Arabic</option>
+                <option value="s3">Commerce/Business Studies</option>
+                <option value="s4">French</option>
+                <option value="s5">Hindi</option>
+                <option value="s6" selected>English</option>
+                <option value="s7">Physical Education</option>
+                <option value="s8">Punjabi</option>
+                <option value="s9">Statistics</option>
+                <option value="s10">Bengali</option>
+                <option value="s11">Computer Science</option>
+                <option value="s12">Geography</option>
+                <option value="s13">History</option>
+                <option value="s14">Music</option>
+                <option value="s15">Physics</option>
+                <option value="s16">Sanskrit</option>
+                <option value="s17">Urdu</option>
+                <option value="s18">Botany</option>
+                <option value="s19">Economics</option>
+                <option value="s20">Geology</option>
+                <option value="s21">Home Science</option>
+                <option value="s22">Persian</option>
+                <option value="s23">Political Science</option>
+                <option value="s24">Sociology</option>
+                <option value="s25">Zoology</option>
+            </select> Enter Marks: <input type="number" name="h1" id="m1" placeholder="Enter marks in percentage">
+            <br>Subject 2: <select name="Subject" id="h2">
+                <option selected>----------</option>
+                <option value="s00">Non Listed Subject</option>
+                <option value="s1">Mathemathics</option>
+                <option value="s2">Arabic</option>
+                <option value="s3">Commerce/Business Studies</option>
+                <option value="s4">French</option>
+                <option value="s5">Hindi</option>
+                <option value="s6">English</option>
+                <option value="s7">Physical Education</option>
+                <option value="s8">Punjabi</option>
+                <option value="s9">Statistics</option>
+                <option value="s10">Bengali</option>
+                <option value="s11">Computer Science</option>
+                <option value="s12">Geography</option>
+                <option value="s13">History</option>
+                <option value="s14">Music</option>
+                <option value="s15">Physics</option>
+                <option value="s16">Sanskrit</option>
+                <option value="s17">Urdu</option>
+                <option value="s18">Botany</option>
+                <option value="s19">Economics</option>
+                <option value="s20">Geology</option>
+                <option value="s21">Home Science</option>
+                <option value="s22">Persian</option>
+                <option value="s23">Political Science</option>
+                <option value="s24">Sociology</option>
+                <option value="s25">Zoology</option>
+            </select> Enter Marks: <input type="number" id="m2" placeholder="Enter your marks in percentage">
+            <br>Subject 3: <select name="Subject" id="h3">
+                <option selected>----------</option>
+                <option value="s00">Non Listed Subject</option>
+                <option value="s1">Mathemathics</option>
+                <option value="s2">Arabic</option>
+                <option value="s3">Commerce/Business Studies</option>
+                <option value="s4">French</option>
+                <option value="s5">Hindi</option>
+                <option value="s6">English</option>
+                <option value="s7">Physical Education</option>
+                <option value="s8">Punjabi</option>
+                <option value="s9">Statistics</option>
+                <option value="s10">Bengali</option>
+                <option value="s11">Computer Science</option>
+                <option value="s12">Geography</option>
+                <option value="s13">History</option>
+                <option value="s14">Music</option>
+                <option value="s15">Physics</option>
+                <option value="s16">Sanskrit</option>
+                <option value="s17">Urdu</option>
+                <option value="s18">Botany</option>
+                <option value="s19">Economics</option>
+                <option value="s20">Geology</option>
+                <option value="s21">Home Science</option>
+                <option value="s22">Persian</option>
+                <option value="s23">Political Science</option>
+                <option value="s24">Sociology</option>
+                <option value="s25">Zoology</option>
+            </select> Enter Marks: <input type="number" id="m3" placeholder="Enter your marks in percentage">
+            <br>Subject 4: <select name="Subject" id="h4">
+                <option selected>----------</option>
+                <option value="s00">Non Listed Subject</option>
+                <option value="s1">Mathemathics</option>
+                <option value="s2">Arabic</option>
+                <option value="s3">Commerce/Business Studies</option>
+                <option value="s4">French</option>
+                <option value="s5">Hindi</option>
+                <option value="s6">English</option>
+                <option value="s7">Physical Education</option>
+                <option value="s8">Punjabi</option>
+                <option value="s9">Statistics</option>
+                <option value="s10">Bengali</option>
+                <option value="s11">Computer Science</option>
+                <option value="s12">Geography</option>
+                <option value="s13">History</option>
+                <option value="s14">Music</option>
+                <option value="s15">Physics</option>
+                <option value="s16">Sanskrit</option>
+                <option value="s17">Urdu</option>
+                <option value="s18">Botany</option>
+                <option value="s19">Economics</option>
+                <option value="s20">Geology</option>
+                <option value="s21">Home Science</option>
+                <option value="s22">Persian</option>
+                <option value="s23">Political Science</option>
+                <option value="s24">Sociology</option>
+                <option value="s25">Zoology</option>
+            </select> Enter Marks: <input type="number" id="m4" placeholder="Enter your marks in percentage">
+            <br>Subject 5: <select name="Subject" id="h5">
+                <option selected>----------</option>
+                <option value="s00">Non Listed Subject</option>
+                <option value="s1">Mathemathics</option>
+                <option value="s2">Arabic</option>
+                <option value="s3">Commerce/Business Studies</option>
+                <option value="s4">French</option>
+                <option value="s5">Hindi</option>
+                <option value="s6">English</option>
+                <option value="s7">Physical Education</option>
+                <option value="s8">Punjabi</option>
+                <option value="s9">Statistics</option>
+                <option value="s10">Bengali</option>
+                <option value="s11">Computer Science</option>
+                <option value="s12">Geography</option>
+                <option value="s13">History</option>
+                <option value="s14">Music</option>
+                <option value="s15">Physics</option>
+                <option value="s16">Sanskrit</option>
+                <option value="s17">Urdu</option>
+                <option value="s18">Botany</option>
+                <option value="s19">Economics</option>
+                <option value="s20">Geology</option>
+                <option value="s21">Home Science</option>
+                <option value="s22">Persian</option>
+                <option value="s23">Political Science</option>
+                <option value="s24">Sociology</option>
+                <option value="s25">Zoology</option>
+            </select> Enter Marks: <input type="number" id="m5" placeholder="Enter your marks in percentage">
+            <br>
+            <br><input type="submit" value= "Check top 4 marks">
+        </form>
+    </center></body>
+</html>
